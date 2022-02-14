@@ -92,6 +92,8 @@
 @media only screen and (max-width: 992px) {
     .view-info {
         flex-wrap: wrap;
+        height: 100%;
+        overflow: scroll;
     }
     .container-info{
         border-right: none !important;
