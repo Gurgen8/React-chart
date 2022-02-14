@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Feed from './components/Feed/Feed';
 import Sidebar from './components/Sidebar/Sidebar';
-import Loading from "./helpers/LoadingProcess"
+import Loading from "./helpers/LoadingProcess";
 
 
 export default function App() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import "./loadingProcess.scss";
-import { Spinner } from "react-bootstrap"
+import { Spinner } from "react-bootstrap";
 
 export default function LoadingProcess() {
   return (
