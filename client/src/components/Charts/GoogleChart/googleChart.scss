@@ -1,0 +1,116 @@
+@import "../../Navbar/navbar.scss";
+
+.google-chart {
+    width: 35%;
+    background-color: #2a2a2a !important;
+    .chart-title-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+        background-color: #2a2a2a;
+        padding: 0 30px;
+        position: relative;
+        margin-top: 7px;
+    }
+    .signups-info-span {
+        display: flex;
+        align-items: center;
+    }
+    .google-chart-ul {
+        padding: 0 30px !important;
+        cursor: pointer;
+    }
+    .google-char-li {
+        list-style: decimal;
+        font-size: 14px;
+        line-height: 40px;
+        color: #ffffff;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid black !important;
+    }
+    .toggle-piechart {
+        font-size: 16px;
+        line-height: 34px;
+        color: #ccc;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+    }
+
+    .arrow-down {
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .chart-title {
+        font-size: 21px;
+        line-height: 34px;
+        color: #fefefe;
+
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .signups-info-span {
+        font-size: 16px;
+        line-height: 34px;
+        color: #ccc;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 20px;
+        border-top: 1px solid black !important;
+    }
+    .arrow-down {
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .submenu-list {
+        @include submenuList();
+    }
+    .submenu-chart {
+        @include submenu();
+        top: 100%;
+    }
+}
+
+//modal-configuration
+
+.modal_div {
+    position: relative !important;
+    .close-icon {
+        position: absolute;
+        top: -15px;
+        right: 0;
+        fill: red !important;
+        stroke: red;
+        cursor: pointer;
+    }
+}
+
+.ReactModal__Content {
+    width: 90% !important;
+    height: 65% !important;
+}
+
+
+//gogle-map-custom design
+
+div[dir="ltr"] {
+    width: 100% !important;
+    div {
+        svg {
+            g {
+                rect {
+                    fill: #2a2a2a;
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+}
+
+

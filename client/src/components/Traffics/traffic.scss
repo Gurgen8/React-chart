@@ -1,0 +1,116 @@
+$border: 0.4px solid #ccc;
+
+.traffic {
+    .traffic-section {
+        display: flex;
+
+        .traffic-cube {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition:  all 0.25s;
+            &:hover{
+                background-color: aliceblue;
+                box-shadow: 3px 10px 3px darkblue;
+            }
+            &:nth-child(1) {
+                border-right: $border;
+                background-image: url("../../assets/img/bg-done.png");
+                b {
+                    color: #00acac;
+                }
+            }
+            &:nth-child(2) {
+                border-right:  $border;
+                background-image: url("../../assets/img/chart-bg.png");
+                b {
+                    color: #1f7bb6;
+                };
+                .title-traffic{
+                    margin-left: 30px;
+                }
+            }
+            &:nth-child(3) {
+                border-right: $border;
+                background-image: url("../../assets/img/earn.png");
+                b {
+                    color: #fbcf71;
+                }
+            }
+            &:nth-child(4) {
+                background-image: url("../../assets/img/query-bg.png");
+                b {
+                    color: #00acac;
+                }
+            }
+
+            .traffic-info {
+                text-align: center;
+              
+
+                .title-traffic {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #222222;
+                    text-align: center;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .traffic-value {
+                    font-size: 50px;
+                    line-height: 24px;
+                    color: #00acac;
+                    font-weight: 900;
+                    text-align: center;
+                    margin-bottom: 15px;
+                }
+                .profit {
+                    color: #1f7bb6 !important;
+                }
+
+                .commisions {
+                    color: #fbcf71;
+                }
+                .pending-commision {
+                    color: #00acac;
+                }
+            }
+        }
+    }
+
+    .maney-icon{
+       fill:#fbcf71;
+       width: 50px;
+       height: 30px;
+    }
+}
+
+//MEDAIAS
+
+@media only screen and (max-width: 767px) {
+    .traffic-section {
+        display: grid !important;
+        grid-template-columns:1fr 1fr !important;
+        .traffic-cube {
+            &:nth-child(1) {
+               border-bottom: $border;
+            }
+            &:nth-child(2) {
+                border-bottom: $border;
+                border-right: none !important;
+             }
+        }
+    }
+     .traffic-value{
+        font-size: 30px !important ;
+    }
+    .title-traffic{
+        margin: 0 !important;
+    }
+}

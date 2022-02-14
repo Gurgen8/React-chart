@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Metric';
+    src: url('../fonts/Metric-Regular.eot');
+    src: local('Metric Regular'), local('Metric-Regular'),
+        url('../fonts/Metric-Regular.ttf') format('embedded-opentype'),
+        url('../fonts/Metric-Regular.woff2') format('woff2'),
+        url('../fonts/Metric-Regular.woff') format('woff'),
+        url('../fonts/Metric-RegularItalic.eot') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Metric';
+    src: url('../fonts/Metric-Bold.eot');
+    src: local('Metric Bold'), local('Metric-Bold'),
+        url('../fonts/Metric-Bold.ttf') format('embedded-opentype'),
+        url('../fonts/Metric-Bold.woff2') format('woff2'),
+        url('../fonts/Metric-Bold.woff') format('woff'),
+        url('../fonts/Metric-BoldItalic.eot') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Metric';
+    src: url('../fonts/Metric-Light.eot');
+    src: local('Metric Light Italic'), local('Metric-LightItalic'),
+        url('../fonts/Metric-Light.ttf') format('embedded-opentype'),
+        url('../fonts/Metric-Light.woff2') format('woff2'),
+        url('../fonts/Metric-Light.woff') format('woff'),
+        url('../fonts/Metric-LightItalic.eot') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Metric";
+    
+  
+}
+
+#root{
+    height: 100vh;
+}
+
+
+///transition-group-custom
+.submenuTransition-enter {
+    opacity: 0;
+    transition: opacity 400ms, transform 400ms;
+    transform: scaleX(-1.9);
+    z-index: 999;
+}
+.submenuTransition-enter-active {
+    opacity: 1;
+    transform: translateY(100px);
+    transition: opacity 300ms, transform 300ms;
+    transform: rotate(360deg);
+    z-index: 999;
+}
+.submenuTransition-exit {
+    opacity: 0.8;
+    transition: opacity 300ms, transform 300ms;
+    z-index: 999;
+}
+.submenuTransition-exit-active {
+    opacity: 0;
+    transform: scaleY(-0.9);
+    transition: opacity 600ms, transform 300ms;
+    z-index: 999;
+}

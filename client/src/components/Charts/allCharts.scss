@@ -1,0 +1,100 @@
+@import "../ViewInfo/viewInfo.scss";
+
+@mixin buttonAnimate {
+    width: 100%;
+    height: 100%;
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: #212121;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.charts-section {
+    display: flex;
+    height: 350px;
+}
+
+
+.modal_div {
+    .values {
+        @include listItem();
+        margin-top: 40px;
+        padding: 10px;
+        text-align: left;
+        span {
+            text-align: center;
+        }
+    }
+}
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    color: firebrick;
+}
+
+#btn {
+    border: 2px solid black;
+    padding: 30px 60px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 24px;
+    font-family: sans-serif;
+    transition: all 0.5s;
+    text-align: center;
+    margin-bottom: -10px;
+    display: none;
+
+    &:before {
+        @include buttonAnimate();
+    }
+    &:after {
+        @include buttonAnimate();
+    }
+    &:hover {
+        color: #212121;
+
+        &:before {
+            transform: rotateX(90deg);
+        }
+
+        &:after {
+            transform: rotateY(90deg);
+        }
+    }
+}
+
+//MEDAIAS
+
+@media only screen and (max-width: 767px) {
+    .lineChart-root {
+        height: 400px;
+        width: 100%;
+    }
+    .user-info {
+        font-size: 13px;
+    }
+
+    .google-chart {
+        width: 100%;
+    }
+
+    #btn{
+        display: block;
+    }
+    .piecharts-root {
+        width: 100%;
+    }
+    .charts-root {
+        text-align: center;
+    }
+    .charts-section {
+        flex-direction: column;
+    }
+}

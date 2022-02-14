@@ -1,0 +1,109 @@
+@mixin listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    &:hover{
+        background-color: #ccc;
+    }
+}
+    
+
+.view-info {
+    display: flex;
+    width: 100%;
+    height: 260px;
+
+    .general-title {
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        width: 100%;
+        background-color: #353535;
+        padding-left: 20px;
+        height: 40px;
+        h2 {
+            font-size: 21px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+    }
+    .fildes {
+        display: flex;
+        width: 100%;
+        background-color: #ffffff;
+        height: 40px;
+        align-items: center;
+        border-bottom: 2px solid #ccc;
+        justify-content: space-between;
+        padding: 0 20px;
+      
+        &:last-child {
+            border: none;
+            padding: 0;
+        }
+       
+        .user-fildes-name {
+            padding-right: 10px;
+            font-size: 13px;
+            line-height: 22px;
+            color: #636363;
+            font-weight: bold;        
+        }
+        .user-values-name {
+            font-size: 14px;
+            line-height: 35px;
+            color: #565656;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+
+    .affikatres-table {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    .container-info {
+        background-color: #353535;
+        width: 100%;
+        border-right: 1px solid #ccc;
+        height: 100%;
+        &:last-child{
+            border-right: none !important;
+        }
+    }
+
+    .values {
+        @include listItem()
+
+    }
+       
+   
+}
+
+
+
+//MEDAIAS
+@media only screen and (max-width: 992px) {
+    .view-info {
+        flex-wrap: wrap;
+    }
+    .container-info{
+        border-right: none !important;
+    }
+ 
+}
+
+@media only screen and (max-width: 767px) {
+   
+    .view-info {
+        display: none;
+    }
+
+ 
+}
